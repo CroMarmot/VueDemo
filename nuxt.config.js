@@ -7,6 +7,7 @@ export default {
 
   router: {
     base: '/VueDemo/',
+    mode: 'hash',
   },
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
