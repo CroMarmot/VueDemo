@@ -3,11 +3,9 @@ name: ci
 on:
   push:
     branches:
-      - main
       - master
   pull_request:
     branches:
-      - main
       - master
 
 jobs:
@@ -16,8 +14,8 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-latest]
-        node: [14]
+        os: [ubuntu-16.04, ubuntu-18.04, ubuntu-latest]
+        node: [12, 14]
 
     steps:
       - name: Checkout 🛎
@@ -49,3 +47,14 @@ jobs:
 
       - name: Run tests 🧪
         run: yarn test
+      
+      - name: Run generate ❤️
+        run: yarn generate
+        
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
