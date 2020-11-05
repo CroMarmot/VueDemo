@@ -3,14 +3,9 @@
     <div>
       <h1 class="title">VueDemo</h1>
       <div class="links">
-        <a
-          href="ScrollTab"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          ScrollTab
-        </a>
+        <NuxtLink to="/ScrollTab">
+          <a rel="noopener noreferrer" class="button--green"> ScrollTab </a>
+        </NuxtLink>
       </div>
     </div>
   </div>
