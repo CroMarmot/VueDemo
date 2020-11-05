@@ -6,6 +6,9 @@
         <NuxtLink to="/ScrollTab">
           <a rel="noopener noreferrer" class="button--green"> ScrollTab </a>
         </NuxtLink>
+        <NuxtLink to="/SwiperDemo">
+          <a rel="noopener noreferrer" class="button--green"> Swiper </a>
+        </NuxtLink>
       </div>
     </div>
   </div>
