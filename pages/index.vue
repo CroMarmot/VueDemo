@@ -9,6 +9,11 @@
         <NuxtLink to="/SwiperDemo">
           <a rel="noopener noreferrer" class="button--green"> Swiper </a>
         </NuxtLink>
+        <NuxtLink to="/MaterialSwipeTabs">
+          <a rel="noopener noreferrer" class="button--green">
+            MaterialSwipeTabs
+          </a>
+        </NuxtLink>
       </div>
     </div>
   </div>
