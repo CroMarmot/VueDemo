@@ -14,6 +14,9 @@
             MaterialSwipeTabs
           </a>
         </NuxtLink>
+        <NuxtLink to="/VerticalPage">
+          <a rel="noopener noreferrer" class="button--green"> VerticalPage </a>
+        </NuxtLink>
       </div>
     </div>
   </div>
