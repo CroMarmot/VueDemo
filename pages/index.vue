@@ -17,6 +17,9 @@
         <NuxtLink to="/VerticalPage">
           <a rel="noopener noreferrer" class="button--green"> VerticalPage </a>
         </NuxtLink>
+        <NuxtLink to="/Ripple">
+          <a rel="noopener noreferrer" class="button--green"> Ripple </a>
+        </NuxtLink>
       </div>
     </div>
   </div>
