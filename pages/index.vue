@@ -20,6 +20,9 @@
         <NuxtLink to="/Ripple">
           <a rel="noopener noreferrer" class="button--green"> Ripple </a>
         </NuxtLink>
+        <NuxtLink to="/ToDataUrl">
+          <a rel="noopener noreferrer" class="button--green"> ToDataUrl </a>
+        </NuxtLink>
       </div>
     </div>
   </div>
