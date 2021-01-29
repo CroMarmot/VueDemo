@@ -23,6 +23,16 @@
         <NuxtLink to="/ToDataUrl">
           <a rel="noopener noreferrer" class="button--green"> ToDataUrl </a>
         </NuxtLink>
+        <NuxtLink to="/Echarts4Import">
+          <a rel="noopener noreferrer" class="button--green">
+            Echarts4Import
+          </a>
+        </NuxtLink>
+        <NuxtLink to="/BinarySearchDemo">
+          <a rel="noopener noreferrer" class="button--green">
+            BinarySearchDemo
+          </a>
+        </NuxtLink>
       </div>
     </div>
   </div>
