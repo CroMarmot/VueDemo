@@ -33,6 +33,9 @@
             BinarySearchDemo
           </a>
         </NuxtLink>
+        <NuxtLink to="/VueForDemo">
+          <a rel="noopener noreferrer" class="button--green"> VueForDemo </a>
+        </NuxtLink>
       </div>
     </div>
   </div>
