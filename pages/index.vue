@@ -36,6 +36,9 @@
         <NuxtLink to="/VueForDemo">
           <a rel="noopener noreferrer" class="button--green"> VueForDemo </a>
         </NuxtLink>
+        <NuxtLink to="/IEEE754">
+          <a rel="noopener noreferrer" class="button--green"> IEEE754 </a>
+        </NuxtLink>
       </div>
     </div>
   </div>
