@@ -39,6 +39,9 @@
         <NuxtLink to="/IEEE754">
           <a rel="noopener noreferrer" class="button--green"> IEEE754 </a>
         </NuxtLink>
+        <NuxtLink to="/Position">
+          <a rel="noopener noreferrer" class="button--green"> Position </a>
+        </NuxtLink>
       </div>
     </div>
   </div>
