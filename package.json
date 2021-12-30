@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "proto2js": "pbjs -t static-module -w es6 -o ./proto/msgProto.js ./proto/message.proto",
+    "js2ts": "pbts -o ./proto/msgProto.d.ts ./proto/msgProto.js",
     "dev": "nuxt-ts",
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
@@ -10,6 +12,7 @@
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
     "lint": "yarn lint:js && yarn lint:style",
+    "precommit": "npm run lint",
     "test": "jest"
   },
   "lint-staged": {
@@ -52,9 +55,11 @@
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.3.0",
+    "node-sass": "^4.13.0",
     "jest": "^26.5.0",
     "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
+    "protobufjs": "^6.8.8",
     "stylelint": "^13.7.2",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",

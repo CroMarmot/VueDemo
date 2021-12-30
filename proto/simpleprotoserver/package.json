@@ -1,0 +1,16 @@
+{
+  "name": "simpleprotoserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Cro-Marmot",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.13.4",
+    "protobufjs": "^6.8.8"
+  }
+}
