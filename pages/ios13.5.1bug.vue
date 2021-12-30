@@ -1,23 +1,13 @@
 <template>
-  <div
-    class="container"
-  >
-    <div
-      v-show="display"
-      :style="{ transform: angle }"
-      class="demo-div"
-    >
+  <div class="container">
+    <div v-show="display" :style="{ transform: angle }" class="demo-div">
       Hey
     </div>
 
     <h1>expect: show div, rotate div. rotate angle({{ rotateA }}), hide div</h1>
     <div v-if="!unClickable">
-      <h2 @click="onClick(0)">
-        Same angle(bug)
-      </h2>
-      <h2 @click="onClick(60)">
-        +60 angle
-      </h2>
+      <h2 @click="onClick(0)">Same angle(bug)</h2>
+      <h2 @click="onClick(60)">+60 angle</h2>
     </div>
   </div>
 </template>
@@ -30,7 +20,7 @@ export default {
       unClickable: false,
       display: false,
       angle: 'rotate(0deg)',
-      rotateA: 0
+      rotateA: 0,
     }
   },
   methods: {
@@ -43,7 +33,7 @@ export default {
       setTimeout(() => {
         // if rotate don't change the rotation will stucked
         this.rotateA = (this.rotateA + deg) % 360
-        this.angle = `rotate(${(6 * 360 + this.rotateA)}deg)`
+        this.angle = `rotate(${6 * 360 + this.rotateA}deg)`
       }, 100)
       // change 100 to 1000 works well
 
@@ -52,11 +42,11 @@ export default {
         this.angle = 'rotate(0deg)'
         this.unClickable = false
       }, 5500)
-    }
-  }
+    },
+  },
 }
 </script>
-<style>
+<style lang="scss" scoped>
 .container {
   margin: 0 auto;
   min-height: 100vh;

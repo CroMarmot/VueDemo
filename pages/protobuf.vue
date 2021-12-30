@@ -3,6 +3,7 @@
     {{ msg }}
     <button @click="postProtobuf()">post</button>
     <button @click="getProtobuf()">get</button>
+    <h2>client</h2>
     <code>
       proto生成js "proto2js": "pbjs -t static-module -w es6 -o
       ./proto/msgProto.js ./proto/message.proto",
@@ -10,6 +11,11 @@
     <code>
       proto生成ts "js2ts": "pbts -o ./proto/msgProto.d.ts ./proto/msgProto.js",
     </code>
+    <h2>server</h2>
+    <pre>
+      cd proto/simpleprotoserver
+      yarn && yarn start
+    </pre>
   </div>
 </template>
 

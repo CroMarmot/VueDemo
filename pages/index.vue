@@ -1,48 +1,15 @@
 <template>
   <div class="container">
-    <div>
-      <h1 class="title">VueDemo</h1>
-      <div class="links">
-        <NuxtLink to="/ScrollTab">
-          <a rel="noopener noreferrer" class="button--green"> ScrollTab </a>
-        </NuxtLink>
-        <NuxtLink to="/SwiperDemo">
-          <a rel="noopener noreferrer" class="button--green"> Swiper </a>
-        </NuxtLink>
-        <NuxtLink to="/MaterialSwipeTabs">
-          <a rel="noopener noreferrer" class="button--green">
-            MaterialSwipeTabs
-          </a>
-        </NuxtLink>
-        <NuxtLink to="/VerticalPage">
-          <a rel="noopener noreferrer" class="button--green"> VerticalPage </a>
-        </NuxtLink>
-        <NuxtLink to="/Ripple">
-          <a rel="noopener noreferrer" class="button--green"> Ripple </a>
-        </NuxtLink>
-        <NuxtLink to="/ToDataUrl">
-          <a rel="noopener noreferrer" class="button--green"> ToDataUrl </a>
-        </NuxtLink>
-        <NuxtLink to="/Echarts4Import">
-          <a rel="noopener noreferrer" class="button--green">
-            Echarts4Import
-          </a>
-        </NuxtLink>
-        <NuxtLink to="/BinarySearchDemo">
-          <a rel="noopener noreferrer" class="button--green">
-            BinarySearchDemo
-          </a>
-        </NuxtLink>
-        <NuxtLink to="/VueForDemo">
-          <a rel="noopener noreferrer" class="button--green"> VueForDemo </a>
-        </NuxtLink>
-        <NuxtLink to="/IEEE754">
-          <a rel="noopener noreferrer" class="button--green"> IEEE754 </a>
-        </NuxtLink>
-        <NuxtLink to="/Position">
-          <a rel="noopener noreferrer" class="button--green"> Position </a>
-        </NuxtLink>
-      </div>
+    <div class="links">
+      <NuxtLink
+        v-for="(item, index) in list"
+        :key="index"
+        :to="`/${item.name}`"
+      >
+        <a rel="noopener noreferrer" class="button--green">
+          {{ item.name }}
+        </a>
+      </NuxtLink>
     </div>
   </div>
 </template>
@@ -50,7 +17,29 @@
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  data() {
+    return {
+      list: [
+        { name: 'BinarySearchDemo' },
+        { name: 'Echarts4Import' },
+        { name: 'IEEE754' },
+        { name: 'MaterialSwipeTabs' },
+        { name: 'Position' },
+        { name: 'Ripple' },
+        { name: 'ScrollTab' },
+        { name: 'SwiperDemo' },
+        { name: 'ToDataUrl' },
+        { name: 'VerticalPage' },
+        { name: 'VueForDemo' },
+        { name: 'cryptocurrency' },
+        { name: 'ios13.5.1bug' },
+        { name: 'protobuf' },
+        { name: 'swiperTest ' },
+      ],
+    }
+  },
+})
 </script>
 
 <style>
@@ -75,5 +64,34 @@ export default Vue.extend({})
 
 .links {
   padding-top: 15px;
+}
+
+.button--green {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #3b8070;
+  color: #3b8070;
+  text-decoration: none;
+  padding: 10px 30px;
+}
+
+.button--green:hover {
+  color: #fff;
+  background-color: #3b8070;
+}
+
+.button--grey {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #35495e;
+  color: #35495e;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-left: 15px;
+}
+
+.button--grey:hover {
+  color: #fff;
+  background-color: #35495e;
 }
 </style>

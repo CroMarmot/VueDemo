@@ -100,7 +100,6 @@ h1 {
 
 <style lang="scss">
 body {
-  padding: 3em;
   box-sizing: border-box;
 }
 

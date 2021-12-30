@@ -4,6 +4,7 @@
       显然纯js能二分1直到自己相等(大约1000层)，裸的js函数递归超8000+层（我电脑上），然而vue
       在556层超过了最大call stack
     </h1>
+    <h2><strong>新的电脑好像不会炸了</strong></h2>
     <BinarySearchComponents :l="0" :r="100" :gtfn="(v) => v * v - 1 > 0" />
     <BinarySearchComponents :l="0" :r="100" :gtfn="(v) => 3 * v * v - 1 > 0" />
     <input v-model="customL" placeholder="custom L" />
