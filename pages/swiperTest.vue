@@ -16,10 +16,7 @@
     {{ swiperData.length }}
   </div>
 </template>
-<<<<<<< HEAD
 
-<style lang="less" rel="stylesheet/less"></style>
-======= >>>>>>> 20f5730... chore: fix
 <script type="text/javascript">
 import Swiper from '~/components/swiper.vue'
 

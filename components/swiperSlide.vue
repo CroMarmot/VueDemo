@@ -6,10 +6,10 @@
 
 <script>
 export default {
-  name: 'swiper-slide',
+  name: 'SwiperSlide',
   data() {
     return {
-      slideClass: 'swiper-slide'
+      slideClass: 'swiper-slide',
     }
   },
   ready() {
@@ -17,7 +17,11 @@ export default {
   },
   mounted() {
     this.update()
-    if (this.$parent && this.$parent.options && this.$parent.options.slideClass) {
+    if (
+      this.$parent &&
+      this.$parent.options &&
+      this.$parent.options.slideClass
+    ) {
       this.slideClass = this.$parent.options.slideClass
     }
   },
@@ -32,7 +36,7 @@ export default {
       if (this.$parent && this.$parent.swiper) {
         this.$parent.update()
       }
-    }
-  }
+    },
+  },
 }
 </script>

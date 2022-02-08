@@ -41,29 +41,29 @@ const DEFAULT_EVENTS = [
   'fromEdge',
   'setTranslate',
   'setTransition',
-  'resize'
+  'resize',
 ]
 
 // export
 export default {
-  name: 'swiper',
+  name: 'Swiper',
   props: {
     options: {
       type: Object,
-      default: () => ({})
+      default: () => ({}),
     },
     globalOptions: {
       type: Object,
       required: false,
-      default: () => ({})
-    }
+      default: () => ({}),
+    },
   },
   data() {
     return {
       swiper: null,
       classes: {
-        wrapperClass: 'swiper-wrapper'
-      }
+        wrapperClass: 'swiper-wrapper',
+      },
     }
   },
   ready() {
@@ -75,7 +75,7 @@ export default {
     if (!this.swiper) {
       let setClassName = false
       for (const className in this.classes) {
-        if (this.classes.hasOwnProperty(className)) {
+        if (Object.hasOwnProperty.call(this.classes, className)) {
           if (this.options[className]) {
             setClassName = true
             this.classes[className] = this.options[className]
@@ -92,7 +92,7 @@ export default {
     this.update()
   },
   beforeDestroy() {
-    this.$nextTick(function() {
+    this.$nextTick(function () {
       if (this.swiper) {
         this.swiper.destroy && this.swiper.destroy()
         delete this.swiper
@@ -117,12 +117,15 @@ export default {
     bindEvents() {
       const vm = this
       DEFAULT_EVENTS.forEach((eventName) => {
-        this.swiper.on(eventName, function() {
+        this.swiper.on(eventName, function () {
           vm.$emit(eventName, ...arguments)
-          vm.$emit(eventName.replace(/([A-Z])/g, '-$1').toLowerCase(), ...arguments)
+          vm.$emit(
+            eventName.replace(/([A-Z])/g, '-$1').toLowerCase(),
+            ...arguments
+          )
         })
       })
-    }
-  }
+    },
+  },
 }
 </script>

@@ -2,18 +2,15 @@
   使用见 src/project/demo/swiperTest/components/index-view.vue
 -->
 <template>
-  <swiper-vue @tap="onClick" ref="instance">
-    <swiper-slide
-      v-for="item in imgList"
-      :key="item.index"
-    >
-      <img
-        :src="item.url">
+  <swiper-vue ref="instance" @tap="onClick">
+    <swiper-slide v-for="item in imgList" :key="item.index">
+      <img :src="item.url" />
     </swiper-slide>
     <div
       v-show="imgList.length > 1"
       class="swiper-pagination"
-      :class="[cssName]"></div>
+      :class="[cssName]"
+    ></div>
   </swiper-vue>
 </template>
 
@@ -37,14 +34,16 @@ export default class swiper {
     // 图片src列表
     imgs: {
       type: Array,
-      default: () => ([])
-    }
+      default: () => [],
+    },
   }
+
   computed = {
     swiper() {
       return this.$refs.instance.swiper
-    }
+    },
   }
+
   methods = {
     onClick() {
       this.$emit('imgClick', this.imgList[this.swiper.realIndex].index)
@@ -65,7 +64,7 @@ export default class swiper {
       } catch (e) {
         console.error(e)
       }
-    }
+    },
   }
 
   computed = {
@@ -87,11 +86,11 @@ export default class swiper {
         }
         ret.push({
           index: i,
-          url: imgs[i]
+          url: imgs[i],
         })
       }
       return ret
-    }
+    },
   }
 }
 </script>
