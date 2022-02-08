@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import axios from 'axiosUI'
+import axios from 'axios'
 
 export default {
   middleware: 'authenticated',
