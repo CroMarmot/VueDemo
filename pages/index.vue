@@ -36,6 +36,7 @@ export default Vue.extend({
         { name: 'ios13.5.1bug' },
         { name: 'protobuf' },
         { name: 'swiperTest ' },
+        { name: 'DeepClone' },
       ],
     }
   },
